@@ -59,7 +59,9 @@
         //%02d，表示这个数字有两位，不足两位用占位符0补足;
         //png格式的图片可以不加格式后缀，jpg最好加上
         NSString*name = [NSString stringWithFormat:@"%@_%02d.jpg",imageName,i];
-        UIImage *headImage = [UIImage imageNamed:name];
+//        UIImage *headImage = [UIImage imageNamed:name];//注意：这种方法加载图片后图片不会被释放，会驻留内存
+        NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+        UIImage *headImage = [UIImage imageWithContentsOfFile:path];//这种方法加载图片后，图片会在一些特定操作后被清除，不会驻留内存
         [images addObject:headImage];
     }
 //2.告诉Tom要播放哪些图片
@@ -70,8 +72,14 @@
     self.Tom.animationRepeatCount = 1;
 //5.播放动画
     [self.Tom startAnimating];
+//6.当动画执行完毕后,把动画属性置空，清空内存(两种代码方式)
+    //第一种
+//    [self performSelector:@selector(clearAniCache) withObject:nil afterDelay:images.count*0.05];//performSelector:表示要执行的方法；withObject：表示方法的传参
+    //第二种
+    [self.Tom performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.Tom.animationDuration];
 }
 
+//播放音效
 -(void)playSound
 {
 //1.获取音效资源的路径
@@ -83,5 +91,11 @@
     AVAudioPlayer *player =[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];//注意，这里的player是个局部变量，播放音效过程中该函数已经跑完。此时该变量会被销毁；因 此若使用局部变量调用播放，将出现没有听到预期音效的bug。解决方法：将它指向一个strong的该类成员变量
      _myPlayer = player;
     [_myPlayer play];
+}
+
+//清空动画缓存
+-(void)clearAniCache
+{
+    [self.Tom setAnimationImages:nil];
 }
 @end

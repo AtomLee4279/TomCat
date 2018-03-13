@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67471B2B2057ABF7004CF9EE /* Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 67471B2A2057ABF7004CF9EE /* Tom.wav */; };
 		67A85A9D20566D1400DD365E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A85A9C20566D1400DD365E /* AppDelegate.m */; };
 		67A85AA020566D1400DD365E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A85A9F20566D1400DD365E /* ViewController.m */; };
 		67A85AA320566D1400DD365E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A85AA120566D1400DD365E /* Main.storyboard */; };
@@ -459,6 +460,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67471B2A2057ABF7004CF9EE /* Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tom.wav; sourceTree = "<group>"; };
 		67A85A9820566D1400DD365E /* TomCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A85A9B20566D1400DD365E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67A85A9C20566D1400DD365E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -925,6 +927,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67471B292057ABF7004CF9EE /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				67471B2A2057ABF7004CF9EE /* Tom.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		67A85A8F20566D1400DD365E = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +963,7 @@
 				67A85AA620566D1400DD365E /* LaunchScreen.storyboard */,
 				67A85AA920566D1400DD365E /* Info.plist */,
 				67A85AAA20566D1400DD365E /* main.m */,
+				67471B292057ABF7004CF9EE /* Sound */,
 				67A868B9205673D100DD365E /* Animations */,
 			);
 			path = TomCat;
@@ -1587,6 +1598,7 @@
 				67A86B8B205673D200DD365E /* knockout_19.jpg in Resources */,
 				67A86C39205673D200DD365E /* stomach_32.jpg in Resources */,
 				67A86B5E205673D200DD365E /* footRight_04.jpg in Resources */,
+				67471B2B2057ABF7004CF9EE /* Tom.wav in Resources */,
 				67A86B2D205673D200DD365E /* fart_13.jpg in Resources */,
 				67A86BDA205673D200DD365E /* pie_17.jpg in Resources */,
 				67A86BC1205673D200DD365E /* knockout_73.jpg in Resources */,

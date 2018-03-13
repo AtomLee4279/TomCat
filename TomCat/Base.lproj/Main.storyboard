@@ -22,12 +22,20 @@
                                 <rect key="frame" x="16" y="59" width="375" height="753"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-A8-n43">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-A8-n43">
                                 <rect key="frame" x="16" y="646" width="120" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="drink"/>
                                 <connections>
-                                    <action selector="drink" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfm-pq-m8Z"/>
+                                    <action selector="doAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ac2-9S-2DC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-wf-2OR">
+                                <rect key="frame" x="255" y="646" width="120" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="scratch"/>
+                                <connections>
+                                    <action selector="doAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuZ-OM-ctT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,5 +54,6 @@
     <resources>
         <image name="drink" width="60" height="60"/>
         <image name="drink_00.jpg" width="640" height="1024"/>
+        <image name="scratch" width="60" height="60"/>
     </resources>
 </document>
